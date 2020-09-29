@@ -12,6 +12,10 @@ class JsonSerDeTest extends AnyFlatSpec with Matchers {
   it should "render a JSON" in {
     Foo(42, Bar("Ahoj!")).toJson should equal("""{"x":42,"bar":{"s":"Ahoj!"}}""")
   }
+
+  it should "parse a JSON" in {
+    """{"x":42,"bar":{"s":"Ahoj!"}}""".fromJson[Foo] should equal(Foo(42, Bar("Ahoj!")))
+  }
 }
 
 object JsonSerDeTest {
