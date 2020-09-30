@@ -47,7 +47,7 @@
         <dependency>
             <groupId>za.co.absa.commons</groupId>
             <artifactId>commons_${scala.binary.version}</artifactId>
-            <version>0.0.16-SNAPSHOT</version>
+            <version>0.0.16</version>
         </dependency>
 
         <dependency>
